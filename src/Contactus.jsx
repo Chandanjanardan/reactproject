@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const Contactus = (props) => {
+  // destructiong the props
   return (
     <div>
         <h1>Name :{props.name}</h1>
