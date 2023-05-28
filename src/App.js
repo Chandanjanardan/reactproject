@@ -39,6 +39,7 @@ function App() {
   //   // name and age in header and copyright in footer
   // }
   const [name,setName]=useState("hero")
+  const [showTitlePage,setShowTitlePage]=useState(true)
   return (
     <>
     {/* <Contactus name={contactdetial.name} phone={contactdetial.phone} email={contactdetial.email}/>
@@ -53,7 +54,7 @@ function App() {
       <h1>Number is : {num}</h1>
       <button onClick={handleNumDec}> Decrement</button>
       </div> */}
-      <Header name={name} setName={setName}/>
+      <Header name={name} setName={setName} showTitlePage={showTitlePage} setShowTitlePage={setShowTitlePage}/>
       <Footer name={name}/>
     </>
   );
