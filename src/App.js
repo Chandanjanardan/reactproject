@@ -7,19 +7,19 @@ import './App.css';
 function App() {
   // use state 
   // let (stateVariable ,state function )=state(default /initial state)
-  let [name,setName]=useState("Vired")
-  const [num,setNum]=useState(0)
-  function handleNumInc(){
-    setNum(num+1)
-  }
-  function handleNumDec(){
-    setNum(num-1)
-  }
-  function handleClick(){
-    console.log("I am clicked");
-    // in order to change the state , we will use state fn
-    setName("hero")
-  }
+  // let [name,setName]=useState("Vired")
+  // const [num,setNum]=useState(0)
+  // function handleNumInc(){
+  //   setNum(num+1)
+  // }
+  // function handleNumDec(){
+  //   setNum(num-1)
+  // }
+  // function handleClick(){
+  //   console.log("I am clicked");
+  //   // in order to change the state , we will use state fn
+  //   setName("hero")
+  // }
   // responsible for storing the state of the component
   // how to store = statefn responsible for manupulationg and changing state variable
  
@@ -38,20 +38,23 @@ function App() {
   //   copyright:"@hello"
   //   // name and age in header and copyright in footer
   // }
+  const [name,setName]=useState("hero")
   return (
     <>
     {/* <Contactus name={contactdetial.name} phone={contactdetial.phone} email={contactdetial.email}/>
     <Header name={obj.name} age={obj.age}/>
     
     <Footer copyright={obj.copyright}/> */}
-    <div>
+    {/* <div>
       My Organisation name is {name}
       <button onClick={handleClick}>Change the name </button>
       <br/>
       <button onClick={handleNumInc}>Increment  </button>
       <h1>Number is : {num}</h1>
       <button onClick={handleNumDec}> Decrement</button>
-      </div>
+      </div> */}
+      <Header name={name} setName={setName}/>
+      <Footer name={name}/>
     </>
   );
 }
