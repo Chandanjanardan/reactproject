@@ -1,0 +1,7 @@
+// In react we have tow type of component :Functional component and class component
+// component life cylce method:mounting ,updating and unmounting
+
+//Mounting :when your component load for the first browser paint,
+            whenever you create a component , you write jsx or html , this html need to be instred or to loaded in browser real dom
+
+// updating 

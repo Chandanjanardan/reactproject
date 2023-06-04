@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import "./css/landingpage.css"
 
 // use effect
 // hook responsible for side effect like api calling
@@ -33,25 +34,44 @@ function LandingPage() {
     console.log("This are the products", product)
     return (
         <div className='header'>
-            <button onClick={() => setCounter(counter + 1)}>+{counter}</button>
+            {/* <button onClick={() => setCounter(counter + 1)}>+{counter}</button> */}
             
 
 
             {
                 product.length!==0 ? product.map((element)=>{
                     return(
+                       <div className='card-container'> 
+                            <div>
+                {
+                    // product.map(ele=>(<div> {ele.title}</div>))
+                    product.length !== 0 ? product.map((element) => (
                         <div className='card'>
-                            <div>Image :{element.thumbnail}
-                            <img src={element.thumbnail}/>
+                            <img src={element.thumbnail} />
+                            <div>
+                            <div>{element.title}</div>
+                            <div>{element.brand}</div>
+                            <div className='card-footer'>
+                                <button className='addtocart'>Add to cart</button>
+                                <button className='viewinfo'>View Info</button>
                             </div>
-                            <div className='title'>{element.title}</div>
-                            <div className='brand'>{element.brand}</div>
+                            </div>
                         </div>
+                    )):<div>No products found</div>
+                
+                }
+
+            </div>
+                        </div>
+                    
                     )
 
                 }):<div>No data</div>
+                
             }
+            
         </div >
+    
     )
 }
 
