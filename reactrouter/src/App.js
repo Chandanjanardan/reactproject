@@ -4,6 +4,7 @@ import Signup from './signup';
 import Signin from './signin'
 import LandingPage from './LandingPage';
 import Header from './Header';
+import Profile from './profile/Profile';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path='/landingpage' element={<LandingPage/>}/>
       <Route path='/header' element={<Header/>}/>
     </Routes>
+    <Profile/>
     </div>
   );
 }
