@@ -5,6 +5,7 @@ import Samletes from "./components/Samletes";
 import Product from "./components/Product";
 import LandingPage from "./components/LandingPage";
 import ViewProductInfo from "./components/ViewProductInfo";
+import LearnUseRef from "./components/LearnUseRef";
 
 function App() {
   const [cookie,setCookie]=useCookies("")
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Samletes setCookie={setCookie} cookie={cookie}/>}/>
       <Route path="/pro/:id" element={<ViewProductInfo/>}/>
       <Route path="/product" element={<LandingPage/>}/>
+      <Route path="/useref" element={<LearnUseRef/>}/>
 
       </Routes>
     </Router>
