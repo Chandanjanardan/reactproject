@@ -1,4 +1,8 @@
 import { createContext } from "react";
-const user = createContext(null)
+const User = createContext(null)
 
-export default user;
+export default User;
+
+// creating context
+// define a boundary
+// Using the value

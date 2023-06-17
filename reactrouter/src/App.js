@@ -17,8 +17,9 @@ function App() {
       <Route path="/contact" element={<Contact/>}/>
       <Route path='/landingpage' element={<LandingPage/>}/>
       <Route path='/header' element={<Header/>}/>
+      {/* <Route path='/profile' element={<Profile/>}/> */}
     </Routes>
-    <Profile/>
+    
     </div>
   );
 }
