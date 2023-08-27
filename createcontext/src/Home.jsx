@@ -16,11 +16,23 @@ function Home() {
         console.log(userDetails)
     }
     console.log(userDetails)
+   function remove(){
+    setUserDetails((prev)=>{
+        return (
+            {...prev,add:null}
+        )
+    })
+   }
     
   return (
     <>
-    {/* <div><h1>Name of the user is:{authContext.username}</h1></div> */}
+    <div><h1>Name of the user is:{userDetails.username}</h1></div>
+    <div>
+
+    {userDetails.add?<h1>added:{userDetails.add}</h1>:null}
+    </div>
     <button onClick={add}>Add in context</button>
+    <button onClick={remove}>Remove add</button>
     <p>{JSON.stringify(userDetails,null,2)}</p>
     </>
   )
